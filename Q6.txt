@@ -1,0 +1,5 @@
+SELECT  [Id]
+      ,[FirstName]
+      ,[LastName]
+      ,[Age]    
+  FROM [LibraryApp].[dbo].[Member] where Age=40

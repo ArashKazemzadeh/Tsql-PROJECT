@@ -1,0 +1,9 @@
+SELECT 
+    YEAR(RegisterDate) AS [Year], 
+    MONTH(RegisterDate) AS [Month], 
+    COUNT(*) AS [Total Members] 
+FROM 
+    Member 
+GROUP BY 
+    YEAR(RegisterDate), 
+    MONTH(RegisterDate)

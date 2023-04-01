@@ -1,0 +1,3 @@
+SELECT YEAR(RegisterDate) AS RegistrationYear, COUNT(*) AS TotalMembers
+FROM Member
+GROUP BY YEAR(RegisterDate)

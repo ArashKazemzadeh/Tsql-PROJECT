@@ -1,0 +1,8 @@
+SELECT 
+  Member.FirstName+''+ 
+  Member.LastName as FullName,
+  City.Title as City
+FROM 
+  Member 
+  JOIN Address ON Member.Id = Address.MemberId
+  JOIN City ON Address.CityId = City.CityId

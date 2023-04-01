@@ -1,0 +1,34 @@
+INSERT INTO [LibraryApp].[dbo].[Member] ([Id], [FirstName], [LastName], [Age], [Mobile], [RegisterDate])
+VALUES (1, 'John', 'Doe', '30', '1234567890', '2022-01-01'),
+(2, 'Jane', 'Doe', '25', '0987654321', '2022-02-01'),
+(3, 'Bob', 'Smith', '40', '5551234567', '2022-03-01');
+
+INSERT INTO [LibraryApp].[dbo].[Genre] ([GenreId], [Title])
+VALUES (1, 'Science Fiction'),
+(2, 'Mystery'),
+(3, 'Romance');
+
+INSERT INTO [LibraryApp].[dbo].[City] ([CityId], [Title])
+VALUES (1, 'New York'),
+(2, 'Los Angeles'),
+(3, 'Chicago');
+
+INSERT INTO [LibraryApp].[dbo].[BookMember] ([MemberId], [BookId])
+VALUES (1, 1),
+(1, 2),
+(2, 2);
+
+INSERT INTO [LibraryApp].[dbo].[BookGenre] ([BookId], [GenreId])
+VALUES (1, 1),
+(1, 2),
+(2, 3);
+
+INSERT INTO [LibraryApp].[dbo].[Book] ([Id], [Name], [GenreId])
+VALUES (1, 'The Hitchhiker''s Guide to the Galaxy', 1),
+(2, 'Pride and Prejudice', 3),
+(3, 'The Da Vinci Code', 2);
+
+INSERT INTO [LibraryApp].[dbo].[Address] ([Id], [Code], [CityId], [Description], [MemberId])
+VALUES (1, '12345', 1, '123 Main St', 1),
+(2, '67890', 2, '456 Oak Ave', 2),
+(3, '54321', 3, '789 Elm St', 3);

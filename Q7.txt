@@ -1,0 +1,5 @@
+SELECT Member.FirstName + ' ' + Member.LastName AS MemberName,
+COUNT(BookMember.BookId) AS BorrowedBooks
+FROM Member
+LEFT JOIN BookMember ON Member.Id = BookMember.MemberId
+GROUP BY Member.FirstName, Member.LastName

@@ -1,0 +1,5 @@
+SELECT g.Title as Genre, COUNT(*) as NumBooks
+FROM Genre g
+INNER JOIN BookGenre bg ON g.GenreId = bg.GenreId
+INNER JOIN BookMember bm ON bg.BookId = bm.BookId
+GROUP BY g.Title

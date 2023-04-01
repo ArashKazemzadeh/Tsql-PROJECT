@@ -1,0 +1,3 @@
+SELECT *
+FROM Member
+WHERE DATEDIFF(day, RegisterDate, GETDATE()) <= 15

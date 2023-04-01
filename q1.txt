@@ -1,0 +1,33 @@
+--CREATE DATABASE LibraryApp;
+ Use  LibraryApp
+CREATE TABLE City (
+    CityId INT NOT NULL PRIMARY KEY,
+    Title VARCHAR(50) NOT NULL
+);
+CREATE TABLE Genre (
+    GenreId INT NOT NULL PRIMARY KEY,
+    Title VARCHAR(50),
+);
+CREATE TABLE Book (
+    BookId INT NOT NULL PRIMARY KEY,
+    [Name] VARCHAR(50),
+    GenreId INT
+);
+
+CREATE TABLE Member (
+    Id INT NOT NULL PRIMARY KEY,
+    FirstName VARCHAR(50) ,
+    LastName VARCHAR(50) ,
+	Age VARCHAR(2),
+    Mobile VARCHAR(20),
+	RegisterDate DATE ,
+   
+);
+
+CREATE TABLE Address (
+    Id INT NOT NULL PRIMARY KEY,
+    Code VARCHAR(10) ,
+    CityId INT,
+	[Description] VARCHAR(1000),
+   
+);
