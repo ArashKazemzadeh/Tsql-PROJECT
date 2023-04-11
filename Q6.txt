@@ -1,5 +1,4 @@
-SELECT  [Id]
-      ,[FirstName]
-      ,[LastName]
-      ,[Age]    
-  FROM [LibraryApp].[dbo].[Member] where Age=40
+SELECT  
+      [Age]   , Count(*)
+  FROM [LibraryApp].[dbo].[Member] 
+  Group By Age

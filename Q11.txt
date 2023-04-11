@@ -4,5 +4,5 @@ SELECT
   City.Title as City
 FROM 
   Member 
-  JOIN Address ON Member.Id = Address.MemberId
+  JOIN Address ON Member.Id = Address.Id
   JOIN City ON Address.CityId = City.CityId
